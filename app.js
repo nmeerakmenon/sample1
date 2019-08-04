@@ -6,7 +6,7 @@ app.set("views","./src/views");
 app.use(express.static(path.join(__dirname,"/Public")));
 
 app.get("/",function(req,res){
-    res.render("index",{list:['book1','book2','book3'],title:"Library"})
+    res.render("index",{nav:[{link:"/book",title:"Book"},{link:"/Author",title:"Author"}],title:"Library"})
 })
 
 app.listen(8080,function(){
